@@ -1,0 +1,728 @@
+<?php 
+/*
+Template Name: Home
+*/
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- bootstrap min css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/bootstrap.min.css">
+		<!-- overlay scrollbars css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/overlayscrollbars.min.css">
+		<!-- swiper min css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/swiper-bundle.min.css">
+		<!-- magnific popup min css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/magnific-popup.css">
+		<!-- nice select css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/nice-select.css">
+		<!-- fonts -->
+		<link rel="stylesheet" href="https://use.typekit.net/hyh2ghq.css">
+		<!-- style css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/main.css">
+		<!-- responsive css -->
+		<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/responsive.css">
+		<title>Home</title>
+	</head>
+	<body data-overlayscrollbars-initialize>
+		<!-- offcanvas section start -->
+		<div class="offcanvas offcanvas-end header-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header justify-content-end">
+				<button type="button" class="btn-close d-flex align-items-center justify-content-center flex-column" data-bs-dismiss="offcanvas" aria-label="Close">
+				<span></span>
+				<span></span>
+				</button>
+			</div>
+			<div class="offcanvas-body">
+				<nav class="mobile-nav">
+					<ul class="mobile-menu">
+						<li class="menu-item-has-children">
+							<a href="#">
+								<span>Services</span>
+								<svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.69506 7.46028C7.47539 7.67996 7.11929 7.67996 6.89961 7.46028L1.16475 1.72541C0.945083 1.50573 0.945083 1.14963 1.16475 0.929956L1.42992 0.664756C1.64959 0.445081 2.00574 0.445081 2.22542 0.664756L7.29734 5.73671L12.3693 0.664756C12.589 0.445081 12.9451 0.445081 13.1647 0.664756L13.4299 0.929956C13.6496 1.14963 13.6496 1.50573 13.4299 1.72541L7.69506 7.46028Z" fill="#F03B3B" stroke="#F03B3B"></path>
+								</svg>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Construction (Design Build)</a>
+								</li>
+								<li>
+									<a href="#">Roofing</a>
+								</li>
+								<li>
+									<a href="#">Mechanical</a>
+								</li>
+								<li>
+									<a href="#">Concrete</a>
+								</li>
+								<li>
+									<a href="#">Fabrication</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+							<span>Projects</span>
+							</a>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#">
+								<span>About DCC</span>
+								<svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.69506 7.46028C7.47539 7.67996 7.11929 7.67996 6.89961 7.46028L1.16475 1.72541C0.945083 1.50573 0.945083 1.14963 1.16475 0.929956L1.42992 0.664756C1.64959 0.445081 2.00574 0.445081 2.22542 0.664756L7.29734 5.73671L12.3693 0.664756C12.589 0.445081 12.9451 0.445081 13.1647 0.664756L13.4299 0.929956C13.6496 1.14963 13.6496 1.50573 13.4299 1.72541L7.69506 7.46028Z" fill="#F03B3B" stroke="#F03B3B"></path>
+								</svg>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Construction (Design Build)</a>
+								</li>
+								<li>
+									<a href="#">Roofing</a>
+								</li>
+								<li>
+									<a href="#">Mechanical</a>
+								</li>
+								<li>
+									<a href="#">Concrete</a>
+								</li>
+								<li>
+									<a href="#">Fabrication</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+							<span>Careers</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<span>Subcontractors</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="offcanvas-bottom-btn">
+					<a href="#" class="btn-1">
+					<span>Contact</span>
+					</a>
+					<a href="#" class="btn-2 overflow-hidden mt-2">
+					<span>Subcontractor Login</span>
+					</a>
+					<div class="social-div-box d-flex align-items-center mt-3">
+						<h6 class="font-black mb-0 mt-1">Connect With Us</h6>
+						<div class="social-link-wrapper d-flex align-items-center">
+							<a href="#">
+								<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.8623 3.84315H8.80053C8.05275 3.84315 7.4466 4.41671 7.4466 5.12421V8.96736H12.8623C13.0163 8.96413 13.1623 9.03193 13.2539 9.14914C13.3454 9.26636 13.3711 9.41829 13.3226 9.55664L12.3207 12.375C12.2284 12.6336 11.9729 12.8085 11.6844 12.8105H7.4466V22.4184C7.4466 22.7721 7.14346 23.0589 6.76964 23.0589H3.38482C3.01094 23.0589 2.70785 22.7721 2.70785 22.4184V12.8105H0.676964C0.30309 12.8105 0 12.5237 0 12.17V9.60789C0 9.25419 0.30309 8.96736 0.676964 8.96736H2.70785V5.12421C2.70785 2.29418 5.1326 0 8.12356 0H12.8623C13.2361 0 13.5393 0.286776 13.5393 0.640526V3.20263C13.5393 3.55638 13.2361 3.84315 12.8623 3.84315Z" fill="#6E6E6E"/>
+								</svg>
+							</a>
+							<a href="#">
+								<svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3.58725 0.630371H22.5422C24.0378 0.630371 25.2501 1.7427 25.2501 3.11483V20.5061C25.2501 21.8782 24.0378 22.9905 22.5422 22.9905H3.58725C2.09174 22.9905 0.879395 21.8782 0.879395 20.5061V3.11483C0.879395 1.7427 2.09174 0.630371 3.58725 0.630371ZM7.64903 19.2638C8.0229 19.2638 8.32599 18.9857 8.32599 18.6427V9.94711C8.32599 9.60413 8.0229 9.32599 7.64903 9.32599H5.61814C5.24427 9.32599 4.94118 9.60413 4.94118 9.94711V18.6427C4.94118 18.9857 5.24427 19.2638 5.61814 19.2638H7.64903ZM6.63358 8.08376C5.51195 8.08376 4.60269 7.24952 4.60269 6.22041C4.60269 5.19131 5.51195 4.35707 6.63358 4.35707C7.75522 4.35707 8.66448 5.19131 8.66448 6.22041C8.66448 7.24952 7.75522 8.08376 6.63358 8.08376ZM20.5113 19.2638C20.8852 19.2638 21.1883 18.9857 21.1883 18.6427V12.9285C21.2323 10.9543 19.6416 9.2695 17.5056 9.02786C16.0122 8.9027 14.5653 9.54264 13.7417 10.6924V9.94711C13.7417 9.60413 13.4386 9.32599 13.0647 9.32599H11.0338C10.66 9.32599 10.3569 9.60413 10.3569 9.94711V18.6427C10.3569 18.9857 10.66 19.2638 11.0338 19.2638H13.0647C13.4386 19.2638 13.7417 18.9857 13.7417 18.6427V13.9844C13.7417 12.9553 14.651 12.121 15.7726 12.121C16.8942 12.121 17.8035 12.9553 17.8035 13.9844V18.6427C17.8035 18.9857 18.1066 19.2638 18.4804 19.2638H20.5113Z" fill="#6E6E6E"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- offcanvas section end -->
+		<!-- header section start -->
+		<header class="header-area">
+			<div class="container position-relative z-3">
+				<div class="row align-items-center justify-content-between">
+					<div class="col col-auto menu-left position-relative z-1">
+						<a href="index.html" class="header-logo d-inline-block">
+						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/header-logo/header-logo.svg" alt="">
+						</a>
+					</div>
+					<div class="col menu-right">
+						<div class="main-menu-wrapper position-relative z-3 d-none d-lg-block">
+							<nav class="main-menu d-flex align-items-center justify-content-end">
+								<ul>
+									<!-- menu link -->
+									<li>
+										<a href="#">
+											<span>Services</span>
+											<svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.69506 7.46028C7.47539 7.67996 7.11929 7.67996 6.89961 7.46028L1.16475 1.72541C0.945083 1.50573 0.945083 1.14963 1.16475 0.929956L1.42992 0.664756C1.64959 0.445081 2.00574 0.445081 2.22542 0.664756L7.29734 5.73671L12.3693 0.664756C12.589 0.445081 12.9451 0.445081 13.1647 0.664756L13.4299 0.929956C13.6496 1.14963 13.6496 1.50573 13.4299 1.72541L7.69506 7.46028Z" fill="#F03B3B" stroke="#F03B3B"/>
+											</svg>
+										</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="#">
+												<span>Construction</span>
+												<span class="sub-inner-caption">(Design Build)</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Roofing</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Mechanical</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Concrete</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Fabrication</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Projects</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>About DCC</span>
+											<svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.69506 7.46028C7.47539 7.67996 7.11929 7.67996 6.89961 7.46028L1.16475 1.72541C0.945083 1.50573 0.945083 1.14963 1.16475 0.929956L1.42992 0.664756C1.64959 0.445081 2.00574 0.445081 2.22542 0.664756L7.29734 5.73671L12.3693 0.664756C12.589 0.445081 12.9451 0.445081 13.1647 0.664756L13.4299 0.929956C13.6496 1.14963 13.6496 1.50573 13.4299 1.72541L7.69506 7.46028Z" fill="#F03B3B" stroke="#F03B3B"/>
+											</svg>
+										</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="#">
+												<span>Construction</span>
+												<span class="sub-inner-caption">(Design Build)</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Roofing</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Mechanical</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Concrete</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+												<span>Fabrication</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Careers</a>
+									</li>
+									<li>
+										<a href="#">Subcontractors</a>
+									</li>
+								</ul>
+								<a href="#" class="btn-1">
+								<span>Contact</span>
+								</a>
+							</nav>
+						</div>
+						<div class="d-flex justify-content-end">
+							<button class="humbarger-btn d-block d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" type="button">
+							<span></span>
+							<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header section end -->
+		<!-- main section start -->
+		<!-- banner section start -->
+		<section class="banner-area position-relative z-6 d-flex align-items-end overflow-hidden">
+			<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner/banner-shape.png" alt="..." class="banner-shape">
+			<div class="container position-relative z-6">
+				<div class="banner-content animation-line-wrapper position-relative z-3">
+					<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner/top-arrow.svg" alt="..." class="top-arrow arrow-1">
+					<h1 class="position-relative z-1 wrapper-line-1 mb-0">
+						<span class="inner-text">Build<br> Smarter,<br> Faster, <br>
+						Better</span>
+					</h1>
+					<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner/bottom-arrow.svg" alt="..." class="bottom-arrow arrow-2">
+				</div>
+			</div>
+			<video class="video-item" src="<?php echo get_theme_file_uri(); ?>/assets/video/banner-video.mp4" playsinline loop autoplay muted></video>
+		</section>
+		<!-- banner section end -->
+		<!-- quality section start -->
+		<section class="quality-area bg-fix position-relative">
+			<div class="quality-bg bg-fix" style="background-image: url('<?php echo get_theme_file_uri(); ?>/assets/images/quality/quality-bg.jpg');"></div>
+			<div class="container position-relative z-3">
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="quality-content mb-p">
+							<h2 class="mb-0 animation-line font-white">Quality Beyond Customer Expectation</h2>
+							<div class="title-line-animation-wrapper">
+								<span class="left-arrow-line"></span>
+								<span class="animation-full-line"></span>
+							</div>
+							<div class="quality-inner-content animation-line mb-p">
+								<p>DCC brings together a wide range of self-performed services to deliver unparalleled value and efficiency to every project. Our commitment to quality and long-term relationships has made us the go-to partner for industrial and commercial projects.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="quality-img-wrapper position-relative z-4">
+							<img src="<?php echo get_theme_file_uri(); ?>/assets/images/quality/quality-shape-img.svg" alt="..." class="quality-img-1 shape-img">
+							<img src="<?php echo get_theme_file_uri(); ?>/assets/images/quality/main-center-img.jpg" alt="..." class="quality-img-2 main-center-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- quality section end -->
+		<!-- our services section start -->
+		<section class="our-services-area position-relative z-1">
+			<div class="services-bg bg-fix" style="background-image: url('<?php echo get_theme_file_uri(); ?>/assets/images/our-services/services-bg.jpg');"></div>
+			<div class="container">
+				<div class="col">
+					<div class="quality-content mb-p">
+						<h2 class="mb-0 animation-line">Our Services</h2>
+						<div class="title-line-animation-wrapper">
+							<span class="left-arrow-line"></span>
+							<span class="animation-full-line"></span>
+						</div>
+						<div class="quality-inner-content">
+							<h3 class="animation-line"><span class="fw-normal font-black">Construction</span>   <span class="inner-sub-caption fw-light font-gray">// Design Build</span></h3>
+							<div class=" animation-line mb-p">
+								<p>DCC doesn't just build—we revolutionize the entire construction process. Our design-build expertise combines nearly eight decades of industry knowledge with a comprehensive suite of in-house capabilities.</p>
+							</div>
+							<div class="animation-line">
+								<a href="#" class="btn-1">
+								<span>Learn More</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- our services section end -->
+		<!-- integrated services section start-->
+		<section class="integrated-services-area">
+			<div class="container">
+				<h3 class="fw-normal font-black position-relative z-1">
+					<span>Integrated services</span>
+				</h3>
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<a href="#" class="integrated-card-wrapper position-relative z-1 d-block">
+							<div class="integrated-card-img overflow-hidden">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/integrated-card/integrated-card-01.jpg" alt="....">
+							</div>
+							<span class="integrated-btn overflow-hidden">
+								<span class="integrated-inner-btn position-relative z-1">
+									<span>Roofing </span>
+									<svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 2L11 10.5L2 19" stroke="#FF5757" stroke-width="3"/>
+									</svg>
+								</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<a href="#" class="integrated-card-wrapper position-relative z-1 d-block version-2">
+							<div class="integrated-card-img overflow-hidden position-relative z-1">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/integrated-card/integrated-card-02.jpg" alt="....">
+							</div>
+							<span class="integrated-btn overflow-hidden version-2">
+								<span class="integrated-inner-btn position-relative z-1 ">
+									<span>Mechanical </span>
+									<svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 2L11 10.5L2 19" stroke="#FF5757" stroke-width="3"/>
+									</svg>
+								</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<a href="#" class="integrated-card-wrapper position-relative z-1 d-block">
+							<div class="integrated-card-img overflow-hidden">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/integrated-card/integrated-card-03.jpg" alt="....">
+							</div>
+							<span class="integrated-btn overflow-hidden">
+								<span class="integrated-inner-btn position-relative z-1">
+									<span>Concrete </span>
+									<svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 2L11 10.5L2 19" stroke="#FF5757" stroke-width="3"/>
+									</svg>
+								</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<a href="#" class="integrated-card-wrapper position-relative z-1 d-block version-2">
+							<div class="integrated-card-img overflow-hidden">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/integrated-card/integrated-card-04.jpg" alt="....">
+							</div>
+							<span class="integrated-btn overflow-hidden version-2">
+								<span class="integrated-inner-btn position-relative z-1 ">
+									<span>Fabrication </span>
+									<svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 2L11 10.5L2 19" stroke="#FF5757" stroke-width="3"/>
+									</svg>
+								</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- integrated services section end-->
+		<!-- about  section start -->
+		<section class="about-section-area position-relative z-6">
+			<div class="about-bg bg-fix" style="background-image: url('<?php echo get_theme_file_uri(); ?>/assets/images/about/about-bg.jpg');"></div>
+			<div class="container position-relative z-3">
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="about-content-wrapper">
+							<div class="title-wrapper d-flex">
+								<h2 class="animation-line">About DCC</h2>
+								<div class="title-line-animation-wrapper version-2">
+									<span class="left-arrow-line"></span>
+									<span class="animation-full-line"></span>
+								</div>
+							</div>
+							<div class="animation-line mb-p">
+								<p>DCC is a third-generation, family-owned business with a strong legacy in the construction industry. Originally specializing in concrete, we now provide a comprehensive range of services. Our design-build approach allows us to utilize our in-house expertise to deliver "Quality Beyond Customer Expectations.”</p>
+							</div>
+							<div class="animation-line">
+								<a href="#" class="btn-1">
+								<span>Learn More</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="founded-conetn-box position-relative z-1">
+							<img src="<?php echo get_theme_file_uri(); ?>/assets/images/about/about-shape.svg" alt="....">
+							<div class="founded-title-info text-center animation-line">
+								<h4 class="font-black fw-light mb-0">Founded in</h4>
+								<span>1945</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- about  section end -->
+		<!-- our client section start -->
+		<section class="our-clinet-area overflow-hidden">
+			<div class="container">
+				<h3 class="fw-normal font-black position-relative z-1 text-center animation-line">
+					<span>Our Clients</span>
+				</h3>
+				<!-- Swiper -->
+				<div class="swiper mySwiper tp-brand-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-01.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-02.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-03.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-04.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-05.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-06.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-07.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-08.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-09.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-10.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-11.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-12.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-13.svg" alt="...">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tp-brand-img">
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/brand-logo/brand-logo-14.svg" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- our client section end -->
+		<!-- featured Projects section start-->
+		<section class="featured-project-area overflow-hidden">
+			<div class="container">
+				<div class="title-wrapper d-flex align-items-center justify-content-center animation-line">
+					<div class="title-info text-center text-md-start">
+						<h2>Featured Projects</h2>
+					</div>
+					<div class="featured-button-wrapper d-flex align-items-center">
+						<div class="featured-line-wrapper">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<a href="#" class="btn-1">
+							<span>View all Projects</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="featured-project-slider-area">
+					<!-- Swiper -->
+					<div class="swiper featured-project-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-01.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Industrial</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-02.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Commercial</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-03.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Concrete</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-01.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Industrial</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-02.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Commercial</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="project-slider-content">
+									<div class="project-slider-img position-relative z-1">
+										<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-03.jpg" alt="....">
+										<span class="project-btn bg-chili-red font-white">Concrete</span>
+									</div>
+									<h2 class="mb-0 mt-2">Dean Baldwin Paint Facility</h2>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next swiper-btn">
+							<svg width="32" height="53" viewBox="0 0 32 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 3L26 26.5L3 50" stroke="white" stroke-width="8"/>
+							</svg>
+						</div>
+						<div class="swiper-button-prev swiper-btn">
+							<svg width="32" height="53" viewBox="0 0 32 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M29 50L6 26.5L29 3" stroke="white" stroke-width="8"/>
+							</svg>
+						</div>
+						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-left-shape.svg" alt="..." class="project-left-shape">
+						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/project/project-right-shape.svg" alt="..." class="project-right-shape">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- featured Projects section end-->
+		<!-- cta section start -->
+		<section class="cta-area position-relative z-3">
+			<div class="cta-bg bg-fix" style="background-image: url('<?php echo get_theme_file_uri(); ?>/assets/images/cta/cta-bg.jpg');"></div>
+			<div class="container position-relative z-3">
+				<div class="title-line-animation-wrapper">
+					<span class="left-arrow-line"></span>
+					<span class="animation-full-line"></span>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="cta-content">
+							<h2 class="font-white animation-line">Let's Build Something Great</h2>
+							<div class="animation-line mb-p">
+								<p>Do you have a project in mind? We'd love to hear about it. Contact our team to see how our personal touch can make all the difference.</p>
+							</div>
+							<div class="animation-line">
+								<a href="#" class="btn-1">
+								<span>Contact Us</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- cta section end -->
+		<!-- main section end -->
+		<!-- footer section start -->
+		<footer class="footer-area position-relative z-3">
+			<div class="container position-relative z-3">
+				<img src="<?php echo get_theme_file_uri(); ?>/assets/images/footer/footer-bg.svg" alt="..." class="footer-shape-img">
+				<div class="footer-title-wrapper position-relative z-1">
+					<h2 class="mb-0 animation-line">Quality Beyond <br>
+						Customer Expectations
+					</h2>
+				</div>
+				<div class="footer-bottom-content">
+					<div class="row align-items-center justify-content-between">
+						<div class="col-xl-7 col-lg-6">
+							<div class="footer-inner-right-content d-flex align-items-start align-items-xl-center flex-wrap justify-content-center justify-content-md-start">
+								<div class="footer-button-wrapper d-flex align-items-center flex-wrap justify-content-center">
+									<a href="#" class="btn-1"><span>Contact Us</span></a>
+									<a href="#" class="btn-2 overflow-hidden">
+									<span>Subcontractor Login</span>
+									</a>
+								</div>
+								<div class="social-div-box d-flex align-items-center">
+									<h6 class="font-black mb-0 mt-1">Connect With Us</h6>
+									<div class="social-link-wrapper d-flex align-items-center">
+										<a href="#">
+											<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.8623 3.84315H8.80053C8.05275 3.84315 7.4466 4.41671 7.4466 5.12421V8.96736H12.8623C13.0163 8.96413 13.1623 9.03193 13.2539 9.14914C13.3454 9.26636 13.3711 9.41829 13.3226 9.55664L12.3207 12.375C12.2284 12.6336 11.9729 12.8085 11.6844 12.8105H7.4466V22.4184C7.4466 22.7721 7.14346 23.0589 6.76964 23.0589H3.38482C3.01094 23.0589 2.70785 22.7721 2.70785 22.4184V12.8105H0.676964C0.30309 12.8105 0 12.5237 0 12.17V9.60789C0 9.25419 0.30309 8.96736 0.676964 8.96736H2.70785V5.12421C2.70785 2.29418 5.1326 0 8.12356 0H12.8623C13.2361 0 13.5393 0.286776 13.5393 0.640526V3.20263C13.5393 3.55638 13.2361 3.84315 12.8623 3.84315Z" fill="#6E6E6E"/>
+											</svg>
+										</a>
+										<a href="#">
+											<svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M3.58725 0.630371H22.5422C24.0378 0.630371 25.2501 1.7427 25.2501 3.11483V20.5061C25.2501 21.8782 24.0378 22.9905 22.5422 22.9905H3.58725C2.09174 22.9905 0.879395 21.8782 0.879395 20.5061V3.11483C0.879395 1.7427 2.09174 0.630371 3.58725 0.630371ZM7.64903 19.2638C8.0229 19.2638 8.32599 18.9857 8.32599 18.6427V9.94711C8.32599 9.60413 8.0229 9.32599 7.64903 9.32599H5.61814C5.24427 9.32599 4.94118 9.60413 4.94118 9.94711V18.6427C4.94118 18.9857 5.24427 19.2638 5.61814 19.2638H7.64903ZM6.63358 8.08376C5.51195 8.08376 4.60269 7.24952 4.60269 6.22041C4.60269 5.19131 5.51195 4.35707 6.63358 4.35707C7.75522 4.35707 8.66448 5.19131 8.66448 6.22041C8.66448 7.24952 7.75522 8.08376 6.63358 8.08376ZM20.5113 19.2638C20.8852 19.2638 21.1883 18.9857 21.1883 18.6427V12.9285C21.2323 10.9543 19.6416 9.2695 17.5056 9.02786C16.0122 8.9027 14.5653 9.54264 13.7417 10.6924V9.94711C13.7417 9.60413 13.4386 9.32599 13.0647 9.32599H11.0338C10.66 9.32599 10.3569 9.60413 10.3569 9.94711V18.6427C10.3569 18.9857 10.66 19.2638 11.0338 19.2638H13.0647C13.4386 19.2638 13.7417 18.9857 13.7417 18.6427V13.9844C13.7417 12.9553 14.651 12.121 15.7726 12.121C16.8942 12.121 17.8035 12.9553 17.8035 13.9844V18.6427C17.8035 18.9857 18.1066 19.2638 18.4804 19.2638H20.5113Z" fill="#6E6E6E"/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-5 col-lg-6">
+							<div class="footer-inner-left-content d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-end flex-wrap">
+								<div class="number-box">
+									<a href="tel:8002480721">
+									<span>Toll Free: </span>
+									<span class="fw-medium">800-248-0721</span>
+									</a>
+									<a href="tel:4782720721">
+									<span>Phone: </span>
+									<span class="fw-medium">478-272-0721</span>
+									</a>
+								</div>
+								<div>
+									<a href="#" class="footer-logo">
+									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/footer/footer-logo.svg" alt="...">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copy-right-content-wrapper">
+					<div class="row justify-content-center justify-content-md-between">
+						<div class="col">
+							<p class="copy-right-caption mb-0 tk-roboto text-center text-md-start">&copy; 2025 dublin Construction. All rights reserved.</p>
+						</div>
+						<div class="col">
+							<div class="other-link-wrapper d-flex align-items-center justify-content-center justify-content-md-end">
+								<a href="#">Privacy Policy</a>
+								<a href="#">Terms of Service</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer section end -->
+		<!-- jquery min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/jquery.min.js"></script>
+		<!-- bootstrap min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/bootstrap.bundle.min.js"></script>
+		<!-- swiper bundle min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/swiper-bundle.min.js"></script>
+		<!-- magnific popup min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/magnific-popup.min.js"></script>
+		<!-- nice select min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/nice-select.min.js"></script>
+		<!-- scrollTrigger min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/scrollTrigger.min.js"></script>
+		<!-- gsap split min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/gsap-split-text.js"></script>
+		<!-- gsap min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/gsap.min.js"></script>
+		<!-- lenis min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/lenis.min.js"></script>
+		<!-- overlay scrollbar min js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/overlayscrollbars.min.js"></script>
+		<!-- main js -->
+		<script src="<?php echo get_theme_file_uri(); ?>/assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+body.login div#login h1 a {
+	background-size: contain !important;
+	width: 100% !important;
+	height: 50px !important;
+}
+body.login {
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body.login:before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.9;
+	background: radial-gradient(
+		37.75% 146.61% at 50% 50%,
+		#ffffff 0%,
+		#191919 100%
+	);
+	mix-blend-mode: multiply;
+}
+#login {
+	z-index: 3;
+	position: relative;
+	padding-top: 0;
+}
+body.login a {
+	color: #c1132a;
+}
+.login #nav a,
+.login #backtoblog a {
+	color: #ffffff;
+}
+.login #nav a:hover,
+.login #backtoblog a:hover,
+.login h1 a:hover {
+	color: #c1132a;
+}
