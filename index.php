@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<section class="section-padding">
+<section class="section-padding py-5 my-5">
 	<div class="container">
 
 		<div class="row mb-4">
@@ -13,7 +13,7 @@ get_header();
 
 		<div class="row mb-4">
 			<div class="col-md-4">
-				<select id="blog-category" class="form-select" multiple>
+				<select id="blog-category" class="form-select">
 					<option value="">All Categories</option>
 
 					<?php
@@ -43,9 +43,14 @@ get_header();
 
 		<div class="row gy-4" id="blog-posts"></div>
 
+		<nav id="paginate-links"></nav>
+
 		<div id="loader-wrapper" style="display:none;">
 			<div class="loader">Loading...</div>
 		</div>
+
+
+
 
 	</div>
 </section>

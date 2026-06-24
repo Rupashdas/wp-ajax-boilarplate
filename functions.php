@@ -137,7 +137,7 @@ function dublin_load_global_posts(){
 
 	$page_number = isset($_POST['from_page']) ? intval($_POST['from_page']) : 1;
 	$search_value = isset($_POST['search_value']) ? sanitize_text_field( $_POST['search_value'] ) : "";
-	$categories = isset($_POST['categories']) && is_array($_POST['categories']) && count($_POST['categories']) > 0 ? $_POST['categories'] : array();
+	$category = isset($_POST['category']) > 0 ? intval($_POST['category']) : "";
 
 	$args = array(
 		"post_type" => "post",
@@ -150,24 +150,65 @@ function dublin_load_global_posts(){
 		$args["s"] = $search_value;
 	}
 
-	if(!empty($categories)){
-		$args['category__in'] = $categories;
+	if($category){
+		$args['cat'] = $category;
 	}
 
 	$post_query = new WP_Query($args);
-
+	
+	ob_start();
+	
+	$has_more = $post_query->max_num_pages > $page_number ? true : false;
 	if($post_query->have_posts()){
-		ob_start();
 		while($post_query->have_posts()){
 			$post_query->the_post();
 			get_template_part("template-parts/post", "card", array("post_id" => get_the_ID()) );
 		}
-		$html = ob_get_clean();
+	}else{
+		get_template_part("template-parts/post", "not-found");
 	}
+	$html = ob_get_clean();
+	
+	$paginate_links = paginate_links(array(
+		'base'      => '%_%',
+		'format'    => '?paged=%#%',
+		'current'   => max(1, $page_number),
+		'total'     => $post_query->max_num_pages,
+		'type'      => 'array',
+		'prev_text' => '&laquo;',
+		'next_text' => '&raquo;',
+	));
+
+	$pagination_markup = "";
+
+	if(!empty($paginate_links)){
+		$pagination_markup .= '<ul class="pagination">';
+		foreach($paginate_links as $link){
+			$is_active = strpos($link, 'current') !== false;
+			$active_class = $is_active ? "active" : "";
+			preg_match('/>(\d+)</', $link, $matches);
+            $page_number_attr = isset($matches[1]) ? $matches[1] : '';
+
+			$link = str_replace( '<a', '<a data-page-number="' . esc_attr($page_number_attr) . '"', $link );
+			$link = str_replace( 'page-numbers', 'page-link', $link );
+
+			// $pagination .= sprintf( '<li class="page-item %s">%s</li>', $is_active ? 'active' : '', str_replace('page-numbers', 'page-link', $link));
+
+			$pagination_markup .= '<li class="page-item '. $active_class .'">';
+			$pagination_markup .= $link;
+			$pagination_markup .= '</li>';
+			
+		}
+		$pagination_markup .= "</ul>";
+	}
+
 	$response = array(
 		"html" => $html,
 		"query" => $args,
+		"has_more" => $has_more,
+		"pagination_markup" => $pagination_markup
 	);
+
 	wp_send_json_success( $response );
 
 	die();
